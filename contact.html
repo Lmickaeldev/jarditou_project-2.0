@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/jarditou_project/assets/css/style.css" />
+    <title>jarditou</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <a class="logo" href="#"
+          ><h1>jarditou</h1>
+          <p class="qualité">la qualité depuis 70 ans</p></a
+        >
+
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tableau.html">Tableau</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <img
+          src="/jarditou_project/assets/img/menu_icon.png"
+          alt="icone-menu"
+          id="icon-menu"
+          class="menu-b"
+        />
+      </div>
+      <script src="/jarditou_project/assets/js/icon-menu.js"></script>
+    </header>
+
+    <section id="contact">
+      <p>*Ces zones sont obligatoires</p>
+      <form name="myform" method="post" id="formulaire_contact" onsubmit="return false">
+        <fieldset class="coordonné">
+          <legend><h3>Vos coordonnées</h3></legend>
+          <label for="name">Votre nom*</label>
+          <input type="text" name="name" id="name" />
+          <span id='defaultname'></span><br>
+          <label for="nickname">Votre Prénom*</label>
+          <input type="text" name="nickname" id="nickname" />
+          <span id='defaultnickname'></span><br>
+          <div class="sex">
+            <input type="radio" id="féminin" name="sexe" value="féminin" />
+            <label for="féminin">Féminin</label>
+            <input type="radio" id="masculin" name="sexe" value="masculin" />
+            <label for="masculin">Masculin</label>
+          </div>
+
+          <br >
+          <label for="date">Date de naissance*</label>
+          <input type="date" name="ddn" id="date" />
+          <span id='defaultdate'></span><br>
+          <label for="codepost">Code postal*</label>
+          <input type="text" name="codepost" id="codepost" />
+          <span id='defaultcodepost'></span><br>
+          <label for="Adress">Adresse : *</label>
+          <input type="text" name="Adress" id="adress" />
+          <span id='defaultadress'></span><br>
+          <label for="ville">ville : *</label>
+          <input type="text" name="ville" id="ville" />
+          <span id='defaultville'></span><br>
+          <label for="mail">email* :</label>
+          <input
+            name="mail"
+            type="email"
+            id="mail"
+            placeholder="dave.loper@afpa.fr"
+          />
+          <span id='defaultmail'></span><br>
+        </fieldset>
+
+        <fieldset class="coordonné">
+          <legend><h3>Votre demande</h3></legend>
+          <label for="requete">sujet* :</label>
+          <br>
+          <select id="requete">
+            <option value="" selected>Veuillez séléctionner un sujet</option>
+            <option value="mes-commande">Mes commandes</option>
+            <option value="ask-produdct">Question sur un produit</option>
+            <option value="Reclame">Récalamtion</option>
+            <option value="others">Autres</option>
+          </select>
+          <span id="defaultrequete"></span><br>
+          <label for="requete">Votre question* :</label>
+          <textarea name="ask"id="sujet"></textarea>
+          <br><br>
+
+          <div class="checkbox1">
+            <label for="acces"></label>
+            <input type="checkbox" name="accept" id="acces" />
+            * Jaccepte le traitement informatique de ce formulaire
+          </div>
+          <span id="defaultacces"></span><br>
+          <div class="boutton">
+           <input type="submit" value="envoyer" id="envoi">
+        <input type="reset" value="annuler" id="bouton_annuler">
+          </div>
+        </fieldset>
+        </form>
+        <script src="/jarditou_project/assets/js/formulaire.js"></script>
+      </section>
+
+    <footer>
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li><a href="#">mentions légales</a></li>
+            <li><a href="#">Horaires</a></li>
+            <li><a href="#">Plan du site</a></li>
+          </ul>
+        </nav>
+        <a class="logo" href="#"
+          ><h1>jarditou</h1>
+          <p class="qualité">la qualité depuis 70 ans</p></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

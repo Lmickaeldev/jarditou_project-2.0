@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>jarditou</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <a class="logo" href="index.html"><h1>jarditou</h1><p class="qualité">la qualité depuis 70 ans</p></a>
+
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tableau.html">Tableau</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <img src="assets/img/menu_icon.png" alt="icone-menu" class="menu-b" />
+      </div>
+      <script src="/jarditou_project/assets/js/icon-menu.js"></script>
+    </header>
+
+    <section id="tabl">
+      <table class="tableau">
+        <thead>
+                    <tr>
+            <th>Photos</th>
+            <th>ID</th>
+            <th>Categorie</th>
+            <th>Libellé</th>
+            <th>Prix</th>
+            <th>couleur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="/assets/img/7.jpg"
+                alt=""
+                style="width: 300px; height: 250px"
+              />
+            </td>
+            <td>7</td>
+            <td>Barbecues</td>
+            <td>aramis</td>
+            <td>110.00€</td>
+            <td>Brun</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/img/8.jpg"
+                alt=""
+                style="width: 300px; height: 250px"
+              />
+            </td>
+            <td>8</td>
+            <td>Barbecues</td>
+            <td>Athos</td>
+            <td>249.99€</td>
+            <td>Noir</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/img/11.jpg"
+                alt=""
+                style="width: 300px; height: 250px"
+              />
+            </td>
+            <td>11</td>
+            <td>Barbecues</td>
+            <td>Clastronic</td>
+            <td>135.90€</td>
+            <td>Chrome</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/img/12.jpg"
+                alt=""
+                style="width: 300px; height: 250px"
+              />
+            </td>
+            <td>12</td>
+            <td>Barbecues</td>
+            <td>Camping</td>
+            <td>88.00€</td>
+            <td>Noir</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="/assets/img/13.jpg"
+                alt=""
+                style="width: 500px; height: 250px"
+              />
+            </td>
+            <td>13</td>
+            <td>Brouette</td>
+            <td>Green</td>
+            <td>49.00€</td>
+            <td>verte</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li><a href="#">mentions légales</a></li>
+            <li><a href="#">Horaires</a></li>
+            <li><a href="#">Plan du site</a></li>
+          </ul>
+        </nav>
+        <a class="logo" href="#"><h1>jarditou</h1><p class="qualité">la qualité depuis 70 ans</p></a>
+      </div>
+    </footer>
+    <!-- script source exterieurs-->
+    <script>
+      document.querySelectorAll('.tableau').forEach(function (table) {
+    let labels = Array.from(table.querySelectorAll('th')).map(function (th) {
+        return th.innerText
+    })
+    table.querySelectorAll('td').forEach(function (td, i) {
+        td.setAttribute('data-label', labels[i % labels.length])
+    })
+})
+    </script>
+  </body>
+</html>
