@@ -1,5 +1,7 @@
-let formulaire_contact = document.getElementById("formulaire_contact");
 
+let formulaire_contact = document.getElementById("formulaire_contact");
+let validation=document.getElementById("envoi")
+//fonction
 formulaire_contact.addEventListener("submit", function (e) {
   let username = document.getElementById("name");
   let nickname = document.getElementById("nickname");
@@ -87,9 +89,11 @@ formulaire_contact.addEventListener("submit", function (e) {
     defaultrequete.innerHTML = "* veuillez selectionner une categorie";
     defaultrequete.style.color = "red";
   }
-  if (acces.value.trim() == "") {
+  if (acces.value == "") {
     let defaultacces = document.getElementById("defaultacces");
     defaultacces.innerHTML = "veuillez coché la case";
     defaultacces.style.color = "red";
   }
 });
+//
+
