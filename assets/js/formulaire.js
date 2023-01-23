@@ -1,6 +1,5 @@
 
 let formulaire_contact = document.getElementById("formulaire_contact");
-let validation=document.getElementById("envoi")
 //fonction
 formulaire_contact.addEventListener("submit", function (e) {
   let username = document.getElementById("name");
@@ -10,10 +9,11 @@ formulaire_contact.addEventListener("submit", function (e) {
   let adress = document.getElementById("adress");
   let ville = document.getElementById("ville");
   let mail = document.getElementById("mail");
+  let ask = document.getElementById("ask")
   let acces = document.getElementById("acces");
   let requete = document.getElementById("requete");
   let myregex = /^[a-zA-Z-\s]+$/;
-  //let myregex2 =/^([a-zA-Z0-9_-])+([.]?[a-zA-Z0-9_-]{1,})*@([a-zA-Z0-9-_]{2,}[.])+[a-zA-Z]{2,3}$")/;
+  let myregex2 =/^[a-z0-9.-]+@[a-z0-9.-]{2,}.[a-z]{2,4}$/;
   let myregex3 = /^\d{5}$/;
   if (username.value.trim() == "") {
     let defaultusername = document.getElementById("defaultname");
@@ -79,7 +79,7 @@ formulaire_contact.addEventListener("submit", function (e) {
     let defaultmail = document.getElementById("defaultmail");
     defaultmail.innerHTML = "*veuillez indiqué votre mail";
     defaultmail.style.color = "red";
-  } else if (myregex.test(mail.value) == false) {
+  } else if (myregex2.test(mail.value) == false) {
     let defaultmail = document.getElementById("defaultmail");
     defaultmail.innerHTML = "*veuillez indiqué votre adresse valide";
     defaultmail.style.color = "red";
@@ -89,11 +89,17 @@ formulaire_contact.addEventListener("submit", function (e) {
     defaultrequete.innerHTML = "* veuillez selectionner une categorie";
     defaultrequete.style.color = "red";
   }
-  if (acces.value == "") {
+
+  if(acces.checked== false) {
     let defaultacces = document.getElementById("defaultacces");
-    defaultacces.innerHTML = "veuillez coché la case";
+    defaultacces.innerHTML = "veuillez accepter le traitement du formulaire";
     defaultacces.style.color = "red";
   }
+  if(ask.value.trim()=="")
+{
+let defaultask=document.getElementById('defaultask');
+defaultask.innerHTML="merci d'écrire le sujet de votre demande";
+defaultask.style.color="red"
+}
 });
-//
 
