@@ -1,7 +1,7 @@
 //variable utlisé la fonction formulaire
 let formulaire_contact = document.getElementById("formulaire_contact");
 //fonction
-formulaire_contact.addEventListener("submit", function (form) {
+formulaire_contact.addEventListener("submit", function (e) {
   //variable liasaon a l'html
   
   let username = document.getElementById("name");
@@ -44,6 +44,8 @@ formulaire_contact.addEventListener("submit", function (form) {
     defaultnickname.style.color = "#FE5E41";
     e.preventDefault();
   }
+ 
+
   //code postal
   if (codepost.value.trim() == "") {
     let defaultCodepost = document.getElementById("defaultcodepost");
@@ -66,6 +68,7 @@ formulaire_contact.addEventListener("submit", function (form) {
     let defaultadress = document.getElementById("defaultadress");
     defaultadress.innerHTML = "*veuillez indiqué votre adresse valide";
     defaultadress.style.color = "#FE5E41";
+    e.preventDefault();
   }
   //pour la date
   if (date.value == "") {
@@ -83,6 +86,7 @@ formulaire_contact.addEventListener("submit", function (form) {
     let defaultville = document.getElementById("defaultville");
     defaultville.innerHTML = "*veuillez indiqué votre adresse valide";
     defaultville.style.color = "#FE5E41";
+    e.preventDefault();
   }
   //pour l'email
   if (mail.value.trim() == "") {
@@ -93,19 +97,23 @@ formulaire_contact.addEventListener("submit", function (form) {
     let defaultmail = document.getElementById("defaultmail");
     defaultmail.innerHTML = "*veuillez indiqué votre adresse valide";
     defaultmail.style.color = "#FE5E41";
+    e.preventDefault();
   }
+  
   
   //pour le menu deroulant
   if (requete.value.trim() == "") {
     let defaultrequete = document.getElementById("defaultrequete");
     defaultrequete.innerHTML = "* veuillez selectionner une categorie";
     defaultrequete.style.color = "red";
+    e.preventDefault();
   }
 //pour la checkbox
   if(acces.checked== false) {
     let defaultacces = document.getElementById("defaultacces");
     defaultacces.innerHTML = "veuillez accepter le traitement du formulaire";
     defaultacces.style.color = "red";
+    e.preventDefault();
   }
   //pour la question
   if(ask.value.trim()=="")
@@ -113,11 +121,11 @@ formulaire_contact.addEventListener("submit", function (form) {
 let defaultask=document.getElementById('defaultask');
 defaultask.innerHTML="merci d'écrire le sujet de votre demande";
 defaultask.style.color="red"
+e.preventDefault();
 }
 
 }
 );
-
 
 
 
